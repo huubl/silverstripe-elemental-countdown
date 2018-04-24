@@ -1,0 +1,7 @@
+---
+Name: dynamic-elemental-countdown-config
+---
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - Dynamic\Elements\CountDown\Extensions\LeftAndMainExtension
+
