@@ -29,7 +29,8 @@
     "extra": {
         "expose": [
             "thirdparty",
-            "icons"
+            "icons",
+            "client/dist"
         ],
         "branch-alias": {
             "dev-master": "1.0.x-dev"

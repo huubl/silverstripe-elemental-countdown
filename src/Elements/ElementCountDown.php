@@ -3,7 +3,7 @@
 namespace Dynamic\Elements\CountDown\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
-use SilverStripe\View\Requirements;
+use SilverStripe\View\ArrayData;
 
 /**
  * Class ElementCountDown
@@ -42,6 +42,11 @@ class ElementCountDown extends BaseElement
     private static $table_name = 'ElementCountDown';
 
     /**
+     * @var ArrayData
+     */
+    private $client_config;
+
+    /**
      * @return string
      */
     public function getType()
@@ -50,30 +55,42 @@ class ElementCountDown extends BaseElement
     }
 
     /**
-     * Adds a custom requirement.
+     * @return $this
      */
-    public function getCountDownJS()
+    public function setClientConfig()
     {
-        // switches out which day count to get off the event
-        $dayVar = 'totalDays';
-        if ($this->ShowMonths && $this->ShowDays) {
-            $dayVar = 'daysToMonth';
+        $clientArray = [
+            'End' => $this->End,
+            'Elapse' => $this->Elapse,
+        ];
+
+        $this->client_config = ArrayData::create($this->encodeArrayValues($clientArray));
+
+        return $this;
+    }
+
+    /**
+     * @return ArrayData
+     */
+    public function getClientConfig()
+    {
+        if (!$this->client_config) {
+            $this->setClientConfig();
         }
 
-        Requirements::customScript(
-            <<<JS
-    jQuery('#countdown-$this->ID').countdown('$this->End', {
-        elapse: $this->Elapse
-    }).on('update.countdown', function(event) {
-        $(this).find('.months').html(event.offset.months);
-        $(this).find('.days').html(event.offset.$dayVar);
-        $(this).find('.hours').html(event.offset.hours);
-        $(this).find('.minutes').html(event.offset.minutes);
-        $(this).find('.seconds').html(event.offset.seconds);
-    });
-JS
-            ,
-            'countDownCustom'
-        );
+        return $this->client_config;
+    }
+
+    /**
+     * @param $array
+     * @return mixed
+     */
+    protected function encodeArrayValues($array)
+    {
+        foreach ($array as $key => $val) {
+            $array[$key] = json_encode($val);
+        }
+
+        return $array;
     }
 }
