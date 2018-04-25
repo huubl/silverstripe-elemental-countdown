@@ -5,7 +5,7 @@ namespace Dynamic\Elements\CountDown\Tests;
 use Dynamic\Elements\CountDown\Elements\ElementCountDown;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\SapphireTest;
-use SilverStripe\View\Requirements;
+use SilverStripe\View\ArrayData;
 
 /**
  * Class ElementCountDownTest
@@ -13,6 +13,11 @@ use SilverStripe\View\Requirements;
  */
 class ElementCountDownTest extends SapphireTest
 {
+    /**
+     * @var string
+     */
+    protected static $fixture_file = '../fixtures.yml';
+
     /**
      *
      */
@@ -25,16 +30,21 @@ class ElementCountDownTest extends SapphireTest
     /**
      *
      */
-    public function testGetCountDownJS()
+    public function testGetClientConfig()
     {
-        $requirements = Requirements::get_custom_scripts();
-        $this->assertArrayNotHasKey('countDownCustom', $requirements);
+        $element = $this->objFromFixture(ElementCountDown::class, 'endonly');
+        $this->assertInstanceOf(ArrayData::class, $element->getClientConfig());
+    }
 
-        /** @var ElementCountDown $object */
-        $object = Injector::inst()->create(ElementCountDown::class);
-        $object->getCountDownJS();
+    /**
+     *
+     */
+    public function testEncodeArrayValues()
+    {
+        $element = $this->objFromFixture(ElementCountDown::class, 'elapse');
+        $config = $element->getClientConfig();
 
-        $requirements = Requirements::get_custom_scripts();
-        $this->assertArrayHasKey('countDownCustom', $requirements);
+        $this->assertEquals(json_decode($config->getField('End')), $element->End);
+        $this->assertEquals(json_decode($config->getField('Elapse')), $element->Elapse);
     }
 }
