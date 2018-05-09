@@ -40,6 +40,14 @@ example: `<div class="countdown" data-end="$End" data-elapse="$Elapse" ></div>`
 
 The above is used in the initialization of the countdown plugin.
 
+## Screen Shots
+
+#### Front End sample of a Countdown Element
+![Front End sample of a Testimonials Element](./readme-images/countdown-block-sample.jpg)
+
+#### CMS - Testimonials Main Tab
+![CMS - Testimonials Main Tab](./readme-images/countdown-block-cms.jpg)
+
 ## Getting more elements
 
 Other elemental modules by Dynamic:
@@ -53,7 +61,10 @@ Other elemental modules by Dynamic:
 * [SilverStripe Elemental Flexslider](https://github.com/dynamic/silverstripe-elemental-flexslider)  
 * [SilverStripe Elemental Blog](https://github.com/dynamic/silverstripe-elemental-blog)  
 * [SilverStripe Elemental Sponsors](https://github.com/dynamic/silverstripe-elemental-sponsors)  
-* [SilverStripe Elemental Testimonials](https://github.com/dynamic/silverstripe-elemental-testimonials) 
+* [SilverStripe Elemental Testimonials](https://github.com/dynamic/silverstripe-elemental-testimonials)
+* [SilverStripe Elemental Accordion](https://github.com/dynamic/silverstripe-elemental-accordion)
+* [SilverStripe Elemental Customer Service](https://github.com/dynamic/silverstripe-elemental-customer-service)
+* [SilverStripe Elemental oEmbed](https://github.com/dynamic/silverstripe-elemental-oembed)  
 
 ## Configuration
 
