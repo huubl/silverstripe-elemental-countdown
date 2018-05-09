@@ -5,7 +5,7 @@
     <% end_if %>
     <span class="days">0</span> Days
     <span class="hours">0</span> Hours
-    <span class="minutes">0</span> Miuntes
+    <span class="minutes">0</span> Minutes
     <% if $ShowSeconds %>
         <span class="seconds">0</span> Seconds
     <% end_if %>

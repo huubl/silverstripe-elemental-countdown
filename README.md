@@ -43,28 +43,14 @@ The above is used in the initialization of the countdown plugin.
 ## Screen Shots
 
 #### Front End sample of a Countdown Element
-![Front End sample of a Testimonials Element](./readme-images/countdown-block-sample.jpg)
+![Front End sample of a Countdown Element](./readme-images/countdown-block-sample.jpg)
 
-#### CMS - Testimonials Main Tab
-![CMS - Testimonials Main Tab](./readme-images/countdown-block-cms.jpg)
+#### CMS - Countdown Element Main Tab
+![CMS - Countdown Element Main Tab](./readme-images/countdown-block-cms.jpg)
 
 ## Getting more elements
 
-Other elemental modules by Dynamic:
-
-* SilverStripe Elemental Blocks
-	* [Packagist](https://packagist.org/packages/dynamic/silverstripe-elemental-blocks)
-	* [GitHub](https://github.com/dynamic/silverstripe-elemental-blocks)
-* SilverStripe Elemental Accordion
-	* [Packagist](https://packagist.org/packages/dynamic/silverstripe-elemental-accordion-block)
-	* [GitHub](https://github.com/dynamic/silverstripe-elemental-accordion)
-* [SilverStripe Elemental Flexslider](https://github.com/dynamic/silverstripe-elemental-flexslider)  
-* [SilverStripe Elemental Blog](https://github.com/dynamic/silverstripe-elemental-blog)  
-* [SilverStripe Elemental Sponsors](https://github.com/dynamic/silverstripe-elemental-sponsors)  
-* [SilverStripe Elemental Testimonials](https://github.com/dynamic/silverstripe-elemental-testimonials)
-* [SilverStripe Elemental Accordion](https://github.com/dynamic/silverstripe-elemental-accordion)
-* [SilverStripe Elemental Customer Service](https://github.com/dynamic/silverstripe-elemental-customer-service)
-* [SilverStripe Elemental oEmbed](https://github.com/dynamic/silverstripe-elemental-oembed)  
+See [Elemental modules by Dynamic](https://github.com/dynamic/silverstripe-elemental-blocks#getting-more-elements)
 
 ## Configuration
 
