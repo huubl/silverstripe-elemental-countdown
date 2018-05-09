@@ -10,8 +10,16 @@
                     $(this).countdown(config.end, {
                         elapse: config.elapse
                     }).on('update.countdown', function (event) {
-                        $(this).find('.months').html(event.offset.months);
-                        $(this).find('.days').html(event.offset.totalDays);
+
+                        var months = $(this).find('.months');
+                        var daysOffset = event.offset.totalDays;
+
+                        if (months.length) {
+                            daysOffset = event.offset.daysToMonth;
+                        }
+
+                        months.html(event.offset.months);
+                        $(this).find('.days').html(daysOffset);
                         $(this).find('.hours').html(event.offset.hours);
                         $(this).find('.minutes').html(event.offset.minutes);
                         $(this).find('.seconds').html(event.offset.seconds);
