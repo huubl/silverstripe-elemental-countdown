@@ -11,5 +11,5 @@
     <% end_if %>
 </div>
 <% require javascript('silverstripe/admin: thirdparty/jquery/jquery.js') %>
-<% require javascript('dynamic/silverstripe-elemental-countdown-block: thirdparty/jquery.countdown-2.1.0/jquery.countdown.min.js') %>
-<% require javascript('dynamic/silverstripe-elemental-countdown-block: client/dist/countdown.init.min.js') %>
+<% require javascript('dynamic/silverstripe-elemental-countdown: thirdparty/jquery.countdown-2.1.0/jquery.countdown.min.js') %>
+<% require javascript('dynamic/silverstripe-elemental-countdown: client/dist/countdown.init.min.js') %>

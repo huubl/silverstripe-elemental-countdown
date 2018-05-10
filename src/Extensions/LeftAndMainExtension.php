@@ -12,6 +12,6 @@ class LeftAndMainExtension extends Extension
 {
     public function init()
     {
-        Requirements::css('dynamic/silverstripe-elemental-countdown-block: icons/icons.css');
+        Requirements::css('dynamic/silverstripe-elemental-countdown: icons/icons.css');
     }
 }
