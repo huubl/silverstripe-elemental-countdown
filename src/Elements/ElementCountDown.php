@@ -8,6 +8,11 @@ use SilverStripe\View\ArrayData;
 /**
  * Class ElementCountDown
  * @package Dynamic\Elements\Elements
+ *
+ * @property string $End
+ * @property boolean $ShowMonths
+ * @property boolean $ShowSeconds
+ * @property boolean $Elapse
  */
 class ElementCountDown extends BaseElement
 {
@@ -52,6 +57,20 @@ class ElementCountDown extends BaseElement
     public function getType()
     {
         return _t(__CLASS__ . '.BlockType', 'Count Down');
+    }
+
+    /**
+     * @return \SilverStripe\ORM\ValidationResult
+     */
+    public function validate()
+    {
+        $result = parent::validate();
+
+        if (!$this->End) {
+            $result->addError('An end date is required');
+        }
+
+        return $result;
     }
 
     /**

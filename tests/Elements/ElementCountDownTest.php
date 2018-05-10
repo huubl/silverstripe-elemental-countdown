@@ -23,8 +23,22 @@ class ElementCountDownTest extends SapphireTest
      */
     public function testGetType()
     {
-        $object = Injector::inst()->create(ElementCountDown::class);
-        $this->assertEquals($object->getType(), 'Count Down');
+        /** @var ElementCountDown $element */
+        $element = $this->objFromFixture(ElementCountDown::class, 'endonly');
+        $this->assertEquals($element->getType(), 'Count Down');
+    }
+
+    /**
+     *
+     */
+    public function testValidate()
+    {
+        /** @var ElementCountDown $element */
+        $element = $this->objFromFixture(ElementCountDown::class, 'endonly');
+        $this->assertTrue($element->validate()->isValid());
+
+        $element = $this->objFromFixture(ElementCountDown::class, 'invalid');
+        $this->assertFalse($element->validate()->isValid());
     }
 
     /**
@@ -32,6 +46,7 @@ class ElementCountDownTest extends SapphireTest
      */
     public function testGetClientConfig()
     {
+        /** @var ElementCountDown $element */
         $element = $this->objFromFixture(ElementCountDown::class, 'endonly');
         $this->assertInstanceOf(ArrayData::class, $element->getClientConfig());
     }
@@ -41,6 +56,7 @@ class ElementCountDownTest extends SapphireTest
      */
     public function testEncodeArrayValues()
     {
+        /** @var ElementCountDown $element */
         $element = $this->objFromFixture(ElementCountDown::class, 'elapse');
         $config = $element->getClientConfig();
 

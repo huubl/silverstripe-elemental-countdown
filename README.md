@@ -8,10 +8,10 @@ Additional elements for the [SilverStripe Elemental](https://github.com/dnadesig
 [![Build Status](https://scrutinizer-ci.com/g/dynamic/silverstripe-elemental-countdown/badges/build.png?b=master)](https://scrutinizer-ci.com/g/dynamic/silverstripe-elemental-countdown/build-status/master)
 [![codecov](https://codecov.io/gh/dynamic/silverstripe-elemental-countdown/branch/master/graph/badge.svg)](https://codecov.io/gh/dynamic/silverstripe-elemental-countdown)
 
-[![Latest Stable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-countdown-block/v/stable)](https://packagist.org/packages/dynamic/silverstripe-elemental-countdown-block)
-[![Total Downloads](https://poser.pugx.org/dynamic/silverstripe-elemental-countdown-block/downloads)](https://packagist.org/packages/dynamic/silverstripe-elemental-countdown-block)
-[![Latest Unstable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-countdown-block/v/unstable)](https://packagist.org/packages/dynamic/silverstripe-elemental-countdown-block)
-[![License](https://poser.pugx.org/dynamic/silverstripe-elemental-countdown-block/license)](https://packagist.org/packages/dynamic/silverstripe-elemental-countdown-block)
+[![Latest Stable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-countdown/v/stable)](https://packagist.org/packages/dynamic/silverstripe-elemental-countdown)
+[![Total Downloads](https://poser.pugx.org/dynamic/silverstripe-elemental-countdown/downloads)](https://packagist.org/packages/dynamic/silverstripe-elemental-countdown)
+[![Latest Unstable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-countdown/v/unstable)](https://packagist.org/packages/dynamic/silverstripe-elemental-countdown)
+[![License](https://poser.pugx.org/dynamic/silverstripe-elemental-countdown/license)](https://packagist.org/packages/dynamic/silverstripe-elemental-countdown)
 
 
 ## Requirements
@@ -21,7 +21,7 @@ Additional elements for the [SilverStripe Elemental](https://github.com/dnadesig
 
 ## Installation
 
-`composer require dynamic/silverstripe-elemental-countdown-block`
+`composer require dynamic/silverstripe-elemental-countdown`
 
 ## Usage
 
