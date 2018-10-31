@@ -9,7 +9,8 @@ use SilverStripe\View\ArrayData;
  * Class ElementCountDown
  * @package Dynamic\Elements\Elements
  *
- * @property string $End
+ * @property string $EndDate
+ * @property string $EndTime
  * @property boolean $ShowMonths
  * @property boolean $ShowSeconds
  * @property boolean $Elapse
@@ -35,7 +36,8 @@ class ElementCountDown extends BaseElement
      * @var array
      */
     private static $db = [
-        'End' => 'DBDatetime',
+        'EndDate' => 'Date',
+        'EndTime' => 'Time',
         'ShowMonths' => 'Boolean',
         'ShowSeconds' => 'Boolean',
         'Elapse' => 'Boolean',
@@ -60,17 +62,46 @@ class ElementCountDown extends BaseElement
     }
 
     /**
+     * @return \SilverStripe\Forms\FieldList
+     */
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+
+        // so seconds shows in field
+        $fields->dataFieldByName('EndTime')
+            ->setAttribute('step', 1);
+
+        $fields->dataFieldByName('Elapse')
+            ->setDescription('Count up after reaching the end date and time');
+
+        return $fields;
+    }
+
+    /**
      * @return \SilverStripe\ORM\ValidationResult
      */
     public function validate()
     {
         $result = parent::validate();
 
-        if (!$this->End) {
+        if (!$this->EndDate) {
             $result->addError('An end date is required');
         }
 
+        if (!$this->EndTime) {
+            $result->addError('An end time is required');
+        }
+
         return $result;
+    }
+
+    /**
+     * @return string
+     */
+    public function End()
+    {
+        return "{$this->EndDate} {$this->EndTime}";
     }
 
     /**
@@ -79,7 +110,7 @@ class ElementCountDown extends BaseElement
     public function setClientConfig()
     {
         $clientArray = [
-            'End' => $this->End,
+            'End' => $this->End(),
             'Elapse' => $this->Elapse,
         ];
 

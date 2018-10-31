@@ -73,14 +73,16 @@ Dynamic\Elements\CountDown\Elements\ElementCountDown:
   endonly:
     Title: End Only Countdown
     ShowTitle: false
-    End: 2027-10-03 17:00:00
+    EndDate: 2027-10-03
+    EndTime: 17:00:00
     ShowMonths: false
     ShowSeconds: false
     Elipse: false
   elapse:
     Title: End Only Countdown
     ShowTitle: false
-    End: 2027-10-03 17:00:00
+    EndDate: 2027-10-03
+    EndTime: 17:00:00
     ShowMonths: false
     ShowSeconds: true
     Elapse: true
