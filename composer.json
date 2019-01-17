@@ -1,7 +1,7 @@
 {
     "name": "dynamic/silverstripe-elemental-countdown",
     "type": "silverstripe-vendormodule",
-    "description": "Additional count down element for the SilverStripe Elemental module",
+    "description": "Countdown element for the SilverStripe Elemental module",
     "keywords": [
         "silverstripe",
         "elemental",
@@ -31,10 +31,7 @@
             "thirdparty",
             "icons",
             "client/dist"
-        ],
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
+        ]
     },
     "autoload": {
         "psr-4": {
