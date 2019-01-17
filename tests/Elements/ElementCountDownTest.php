@@ -3,8 +3,8 @@
 namespace Dynamic\Elements\CountDown\Tests;
 
 use Dynamic\Elements\CountDown\Elements\ElementCountDown;
+use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\SapphireTest;
-use SilverStripe\Forms\FieldList;
 use SilverStripe\View\ArrayData;
 
 /**
@@ -31,16 +31,6 @@ class ElementCountDownTest extends SapphireTest
     /**
      *
      */
-    public function testGetCMSFields()
-    {
-        /** @var ElementCountDown $element */
-        $element = $this->objFromFixture(ElementCountDown::class, 'endonly');
-        $this->assertInstanceOf(FieldList::class, $element->getCMSFields());
-    }
-
-    /**
-     *
-     */
     public function testValidate()
     {
         /** @var ElementCountDown $element */
@@ -49,16 +39,6 @@ class ElementCountDownTest extends SapphireTest
 
         $element = $this->objFromFixture(ElementCountDown::class, 'invalid');
         $this->assertFalse($element->validate()->isValid());
-    }
-
-    /**
-     *
-     */
-    public function testEnd()
-    {
-        /** @var ElementCountDown $element */
-        $element = $this->objFromFixture(ElementCountDown::class, 'endonly');
-        $this->assertEquals('2027-10-03 17:00:00', $element->End());
     }
 
     /**
@@ -80,7 +60,7 @@ class ElementCountDownTest extends SapphireTest
         $element = $this->objFromFixture(ElementCountDown::class, 'elapse');
         $config = $element->getClientConfig();
 
-        $this->assertEquals(json_decode($config->getField('End')), $element->End());
+        $this->assertEquals(json_decode($config->getField('End')), $element->End);
         $this->assertEquals(json_decode($config->getField('Elapse')), $element->Elapse);
     }
 }

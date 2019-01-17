@@ -40,9 +40,6 @@ example: `<div class="countdown" data-end="$End" data-elapse="$Elapse" ></div>`
 
 The above is used in the initialization of the countdown plugin.
 
-### Upgrade Notes
-If updating from 1.0.0-beta1 or older to a newer version the `Countdown Element End Update` task must be run.
-
 ## Screen Shots
 
 #### Front End sample of a Countdown Element
