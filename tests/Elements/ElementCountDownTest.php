@@ -25,7 +25,7 @@ class ElementCountDownTest extends SapphireTest
     {
         /** @var ElementCountDown $element */
         $element = $this->objFromFixture(ElementCountDown::class, 'endonly');
-        $this->assertEquals($element->getType(), 'Count Down');
+        $this->assertEquals($element->getType(), 'Countdown');
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace Dynamic\Elements\CountDown\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\View\ArrayData;
 
 /**
@@ -19,17 +20,22 @@ class ElementCountDown extends BaseElement
     /**
      * @var string
      */
-    private static $icon = 'sectionnav-icon';
+    private static $icon = 'font-icon-block-content';
 
     /**
      * @var string
      */
-    private static $singular_name = 'Count Down Element';
+    private static $singular_name = 'Countdown Element';
 
     /**
      * @var string
      */
-    private static $plural_name = 'Count Down Elements';
+    private static $plural_name = 'Countdown Elements';
+
+    /**
+     * @var string
+     */
+    private static $description = 'Displays a countdown to a specific date and time.';
 
     /**
      * @var array
@@ -63,9 +69,31 @@ class ElementCountDown extends BaseElement
     /**
      * @return string
      */
+    public function getSummary()
+    {
+        $end = $this->dbObject('End');
+        return DBField::create_field(
+            'HTMLText',
+            'Count down to ' . $end->Date() . ' ' . $end->Time()
+        )->Summary(20);
+    }
+
+    /**
+     * @return array
+     */
+    protected function provideBlockSchema()
+    {
+        $blockSchema = parent::provideBlockSchema();
+        $blockSchema['content'] = $this->getSummary();
+        return $blockSchema;
+    }
+
+    /**
+     * @return string
+     */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Count Down');
+        return _t(__CLASS__ . '.BlockType', 'Countdown');
     }
 
     /**

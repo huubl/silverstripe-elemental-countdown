@@ -1,7 +1,7 @@
 {
     "name": "dynamic/silverstripe-elemental-countdown",
     "type": "silverstripe-vendormodule",
-    "description": "Additional count down element for the SilverStripe Elemental module",
+    "description": "Display a countdown to a specific date and time",
     "keywords": [
         "silverstripe",
         "elemental",

@@ -1,6 +1,6 @@
-# SilverStripe Elemental Count Down Block
+# SilverStripe Elemental Countdown Block
 
-Additional elements for the [SilverStripe Elemental](https://github.com/dnadesign/silverstripe-elemental) module.
+Displays a countdown to a specific date and time.
 
 [![Build Status](https://travis-ci.org/dynamic/silverstripe-elemental-countdown.svg?branch=master)](https://travis-ci.org/dynamic/silverstripe-elemental-countdown)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dynamic/silverstripe-elemental-countdown/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dynamic/silverstripe-elemental-countdown/?branch=master)
@@ -25,9 +25,9 @@ Additional elements for the [SilverStripe Elemental](https://github.com/dnadesig
 
 ## Usage
 
-Elemental Count Down Block will add the following Element to your site:
+Elemental Countdown Block will add the following Element to your site:
 
-* Count Down (to a date/time specified in the cms)
+* Countdown (to a date/time specified in the cms)
 
 ### Template Notes
 
