@@ -36,9 +36,6 @@ class ElementCountDownTest extends SapphireTest
         /** @var ElementCountDown $element */
         $element = $this->objFromFixture(ElementCountDown::class, 'endonly');
         $this->assertTrue($element->validate()->isValid());
-
-        $element = $this->objFromFixture(ElementCountDown::class, 'invalid');
-        $this->assertFalse($element->validate()->isValid());
     }
 
     /**

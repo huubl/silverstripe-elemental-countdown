@@ -52,25 +52,20 @@ class ElementCountDown extends BaseElement
     private $client_config;
 
     /**
+     * Sets the Date field to the current date.
+     */
+    public function populateDefaults()
+    {
+        $this->End = date('Y-m-d', strtotime("+30 days"));
+        parent::populateDefaults();
+    }
+
+    /**
      * @return string
      */
     public function getType()
     {
         return _t(__CLASS__ . '.BlockType', 'Count Down');
-    }
-
-    /**
-     * @return \SilverStripe\ORM\ValidationResult
-     */
-    public function validate()
-    {
-        $result = parent::validate();
-
-        if (!$this->End) {
-            $result->addError('An end date is required');
-        }
-
-        return $result;
     }
 
     /**
