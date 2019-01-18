@@ -17,6 +17,7 @@
     ],
     "require": {
         "dnadesign/silverstripe-elemental": "^4@dev",
+        "silverstripe/recipe-cms": "^4@dev",
         "silverstripe/vendor-plugin": "^1@dev"
     },
     "require-dev": {
@@ -33,7 +34,7 @@
             "client/dist"
         ],
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "2.0.x-dev"
         }
     },
     "autoload": {

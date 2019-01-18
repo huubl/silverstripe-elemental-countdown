@@ -16,8 +16,8 @@ Additional elements for the [SilverStripe Elemental](https://github.com/dnadesig
 
 ## Requirements
 
-* SilverStripe ^4.0
-* SilverStripe Elemental ^2.0
+* silverstripe/recipe-cms: ^4@dev
+* dnadesign/silverstripe-elemental: ^4@dev
 
 ## Installation
 
