@@ -20,7 +20,7 @@ class ElementCountDown extends BaseElement
     /**
      * @var string
      */
-    private static $icon = 'font-icon-block-content';
+    private static $icon = 'font-icon-clock';
 
     /**
      * @var string
