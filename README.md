@@ -33,10 +33,10 @@ Elemental Countdown Block will add the following Element to your site:
 
 When overriding the `templates/Dynamic/Elements/CountDown/Elements/ElementCountDown.ss` file in your own theme, be sure to include the following in your `.countdown` element:
 
-* `data-end="$End"`
+* `data-end="$End $Timezone"`
 * `data-elapse="$Elapse"`
 
-example: `<div class="countdown" data-end="$End" data-elapse="$Elapse" ></div>`
+example: `<div class="countdown" data-end="$End $Timezone" data-elapse="$Elapse" ></div>`
 
 The above is used in the initialization of the countdown plugin.
 

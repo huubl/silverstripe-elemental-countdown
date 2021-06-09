@@ -1,5 +1,5 @@
 <h3>$Title</h3>
-<div id="countdown-$ID" class="countdown" data-end="$End" data-elapse="$Elapse" >
+<div id="countdown-$ID" class="countdown" data-end="$End $Timezone" data-elapse="$Elapse" >
     <% if $ShowMonths %>
         <span class="months">0</span> Months
     <% end_if %>
