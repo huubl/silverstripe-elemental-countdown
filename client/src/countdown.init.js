@@ -7,7 +7,7 @@
                 $(this).each(function () {
                     if ($(this).hasClass('cd-applied')) return true;
 
-                    $(this).countdown(config.end, {
+                    $(this).countdown(Date.parse(config.end), {
                         elapse: config.elapse
                     }).on('update.countdown', function (event) {
 
